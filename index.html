@@ -14,49 +14,37 @@
     }
 
     body {
-      background: url('https://images.unsplash.com/photo-1593032457869-8a0cc5f93790?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
+      background: #fff;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       min-height: 100vh;
     }
 
-    .container {
-      backdrop-filter: blur(6px);
-      background-color: rgba(255, 255, 255, 0.8);
-      display: flex;
-      flex: 1;
-      flex-direction: row-reverse;
-      width: 100%;
-    }
-
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 200px;
-      background: linear-gradient(to right, #FFC371, #FF5F6D);
-      color: #fff;
+      background: linear-gradient(to right, #E4BFB3, #F3D8C7);
+      color: #4A4A4A;
       padding: 1.5rem;
       text-align: center;
       font-size: 1.8rem;
       font-weight: bold;
       z-index: 10;
       letter-spacing: 1px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .main-container {
+      display: flex;
+      flex: 1;
+      flex-direction: row-reverse;
+      width: 100%;
     }
 
     .sidebar {
-      width: 200px;
-      background: #fff8f0;
-      padding-top: 6rem;
-      position: fixed;
-      right: 0;
-      top: 0;
-      height: 100vh;
-      border-left: 1px solid #ffd6c2;
-      box-shadow: -2px 0 5px rgba(255, 111, 97, 0.1);
-      transition: all 0.3s ease;
+      width: 220px;
+      background: #FAF6F2;
+      padding-top: 2rem;
+      border-left: 2px solid #EAD6C8;
+      box-shadow: -2px 0 5px rgba(234, 214, 200, 0.2);
     }
 
     .sidebar ul {
@@ -70,18 +58,18 @@
 
     .sidebar a {
       text-decoration: none;
-      color: #ff5f6d;
+      color: #A05D56;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
     .sidebar a:hover {
-      color: #FF8A5C;
+      color: #D28F89;
     }
 
     main {
       flex: 1;
-      padding: 7rem 2rem 2rem 2rem;
+      padding: 2rem;
       animation: fadeIn 1s ease;
     }
 
@@ -93,12 +81,10 @@
     h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #FF5F6D;
-      border-bottom: 2px solid #FF8A5C;
-      display: inline-block;
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 0 0.5rem;
-      border-radius: 4px;
+      color: #A05D56;
+      border-left: 5px solid #F3D8C7;
+      padding-left: 0.5rem;
+      background-color: #FCF8F5;
     }
 
     .product-grid {
@@ -112,7 +98,7 @@
       background: #fff;
       padding: 1rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255, 111, 97, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
       text-align: center;
       transition: transform 0.3s ease;
     }
@@ -130,17 +116,17 @@
     .product-card h3 {
       margin: 0.5rem 0;
       font-size: 1.2rem;
-      color: #ff5f6d;
+      color: #A05D56;
     }
 
     .product-card p {
-      color: #666;
+      color: #777;
       font-size: 0.95rem;
     }
 
     .product-card button {
       margin-top: 0.5rem;
-      background: #ff8a5c;
+      background: #A05D56;
       color: #fff;
       border: none;
       padding: 0.5rem 1rem;
@@ -150,44 +136,32 @@
     }
 
     .product-card button:hover {
-      background: #ff6b6b;
+      background: #D28F89;
     }
 
     @media (max-width: 768px) {
-      body {
+      .main-container {
         flex-direction: column;
-      }
-
-      .container {
-        flex-direction: column;
-      }
-
-      header {
-        position: relative;
-        right: auto;
       }
 
       .sidebar {
-        position: relative;
         width: 100%;
-        height: auto;
         border-left: none;
-        border-top: 1px solid #ffd6c2;
+        border-top: 2px solid #EAD6C8;
         box-shadow: none;
-        padding-top: 1rem;
       }
 
       main {
-        padding: 2rem 1rem;
+        padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      時尚服裝批發｜伍壹科技有限公司｜00012375
-    </header>
+  <header>
+    時尚服裝批發中心
+  </header>
+  <div class="main-container">
     <nav class="sidebar">
       <ul>
         <li><a href="#products">產品展示</a></li>
@@ -195,6 +169,7 @@
         <li><a href="#cart">購物車</a></li>
         <li><a href="#philosophy">服務理念</a></li>
         <li><a href="#features">功能列表</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
       </ul>
     </nav>
     <main>
@@ -229,6 +204,13 @@
       <section id="philosophy">
         <h2>服務理念</h2>
         <p>我們致力於為客戶提供最新、最時尚且高品質的服裝商品。</p>
+      </section>
+      <section id="contact">
+        <h2>聯絡我們</h2>
+        <p>如有任何問題或合作洽詢，歡迎聯絡我們：</p>
+        <ul>
+          <li> 伍壹科技有限公司 | 00012375</li>
+        </ul>
       </section>
     </main>
   </div>
