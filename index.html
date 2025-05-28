@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>時尚服裝批發</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
 
+    body {
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 200px;
+      background: #111;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      z-index: 10;
+      letter-spacing: 1px;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #fff;
+      padding-top: 6rem;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      border-left: 1px solid #ddd;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 1rem;
+    }
+
+    .sidebar li {
+      margin: 1.5rem 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      color: #0077cc;
+    }
+
+    main {
+      flex: 1;
+      padding: 7rem 2rem 2rem 2rem;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+      border-bottom: 2px solid #0077cc;
+      display: inline-block;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .product-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .product-card button {
+      margin-top: 0.5rem;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background: #005fa3;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-top: 1px solid #ccc;
+        padding-top: 1rem;
+      }
+
+      header {
+        right: 0;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      時尚服裝批發中心 ｜ 伍壹科技有限公司 ｜00012375
+    </header>
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#products">產品展示</a></li>
+        <li><a href="#news">最新消息</a></li>
+        <li><a href="#cart">購物車</a></li>
+        <li><a href="#philosophy">服務理念</a></li>
+        <li><a href="#features">功能列表</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="products">
+        <h2>產品展示</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="商品1">
+            <h3>時尚上衣</h3>
+            <p>簡潔大方設計，百搭款式。</p>
+            <button>加入購物車</button>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="商品2">
+            <h3>經典長褲</h3>
+            <p>舒適剪裁，適合各種穿搭。</p>
+            <button>加入購物車</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>最新消息</h2>
+        <p>2025春夏新款已上架，立即選購！</p>
+      </section>
+
+      <section id="cart">
+        <h2>購物車</h2>
+        <p>目前購物車是空的。</p>
+      </section>
+
+      <section id="philosophy">
+        <h2>服務理念</h2>
+        <p>我們致力於為客戶提供最新、最時尚且高品質的服裝商品。</p>
+      </section>
+
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll(".product-card button").forEach(button => {
+      button.addEventListener("click", () => {
+        alert("商品已加入購物車！");
+      });
+    });
+  </script>
+</body>
+</html>
